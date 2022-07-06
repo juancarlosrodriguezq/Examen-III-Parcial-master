@@ -1,0 +1,63 @@
+body::before {
+  display: block;
+  content: '';
+  height: 60px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .news-input {
+    width: 50%;
+  }
+}
+
+.acordion{
+  max-width: 800px;
+  
+  
+}
+
+.acordion .contenido{
+  position: relative;
+  margin: 10px 20px;
+}
+
+.acordion .contenido .label{
+  position: relative;
+  padding: 10px;
+  background: rgba(7, 12, 12, 0.671);
+  color: white;
+  cursor: pointer;
+}
+
+.acordion .contenido .label::before{
+  font-size: 1.5em;
+  transform: translateY(-50%);
+  content:'+';
+  position: absolute;
+  top: 50%;
+  right: 20px
+}
+
+.acordion .contenido.active .label::before{
+  content:'-';
+}
+
+.acordion .contenido .content{
+  position: relative;
+  background: white;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+
+.acordion .contenido.active .content{
+  height: 150px;
+  padding: 10px;
+}
